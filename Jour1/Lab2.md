@@ -38,9 +38,9 @@ df.to_csv("openfoodfacts_sample.csv", index=False)
 print("✅ CSV exporté avec succès !")
 
 ---
-### 2. ☁️ Uploader le CSV dans Cloud Storage (si vous le souhaitez)
+### 2. ☁️ Uploader le CSV dans Cloud Storage
 
-Vous pouvez réutiliser le bucket créé dans le cas pratique 1 :
+Vous pouvez réutiliser le bucket créé dans le cas pratique Lab1.md :
 ```
 gsutil cp openfoodfacts_sample.csv gs://data-cloud-kadri/
 ```
