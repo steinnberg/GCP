@@ -33,9 +33,11 @@ Nous allons extraire des informations nutritionnelles pour une sélection de pro
 ### 1. 🐍 Script Python pour requête API + conversion CSV
 # 
 # Exporter en CSV
-df = pd.DataFrame(produits)
-df.to_csv("openfoodfacts_sample.csv", index=False)
-print("✅ CSV exporté avec succès !")
+- df = pd.DataFrame(produits)
+
+- df.to_csv("openfoodfacts_sample.csv", index=False)
+
+- print("✅ CSV exporté avec succès !")
 
 ---
 ### 2. ☁️ Uploader le CSV dans Cloud Storage

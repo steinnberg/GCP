@@ -67,4 +67,6 @@ Mettre en place les briques fondamentales d’un projet Data Cloud sur Google Cl
 Si vous avez le SDK Google Cloud installé, vous pouvez aussi uploader en ligne de commande :
 
 ```bash
-gsutil cp olist_customers_dataset.csv gs://data-cloud-votre-prenom/
+gsutil cp "C:\Users\Kered\Documents\MyDigital_School\Jour1\openfoodfacts_sample.csv" gs://kadri_bucket/
+```
+

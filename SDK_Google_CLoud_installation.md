@@ -13,7 +13,7 @@ Accès admin sur ta machine
 Navigateur (pour l’auth via gcloud auth login)
 
  - 🔸 2. Installation (par OS)
-    `Windows`
+ `Windows`
  - Télécharge l’installateur ici :
 👉 https://cloud.google.com/sdk/docs/install
 
@@ -25,7 +25,7 @@ Navigateur (pour l’auth via gcloud auth login)
 gcloud init
 ```
 
-✅ Cela lancera le navigateur pour te connecter à ton compte GCP, puis tu pourras choisir ton projet actif.
+### ✅ Cela lancera le navigateur pour te connecter à ton compte GCP, puis tu pourras choisir ton projet actif.
 
 `🍎 macOS` (Homebrew recommandé)
 ```
@@ -63,7 +63,7 @@ bq --version
 ```
 
 
-Et pour voir ton projet actif :
+Et pour voir les projets actifs :
 ```
 gcloud config list
 ```

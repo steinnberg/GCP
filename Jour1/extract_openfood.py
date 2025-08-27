@@ -27,3 +27,8 @@ for code in codes:
                 "sugars_100g": prod.get("nutriments", {}).get("sugars_100g", None),
                 "salt_100g": prod.get("nutriments", {}).get("salt_100g", None),
             })
+
+df = pd.DataFrame(produits) 
+df.to_csv("openfoodfacts_sample.csv", index=False) 
+
+print("✅ CSV exporté avec succès !")
