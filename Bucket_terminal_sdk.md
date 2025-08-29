@@ -85,3 +85,14 @@ gcloud config set project NOM_DU_PROJET
 ```
 gsutil ls
 ```
+
+### Dépôts
+| Action                       | Commande terminal                        |
+| ---------------------------- | ---------------------------------------- |
+| Lister tous les projets GCP  | `gcloud projects list`                   |
+| Basculer sur un projet donné | `gcloud config set project <project-id>` |
+| Voir le projet actif         | `gcloud config list project`             |
+| Lister tous les buckets GCS  | `gsutil ls`                              |
+
+
+
