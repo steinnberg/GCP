@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "data-cloud-kadri",
+  "private_key_id": "b3a4a2cf4fedb7845f25109393c115b82499e77c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCzav5+cM+mskUl\nLEkowQbGkSL9oPH4dIFYFcIcPPxc/CSwSGd4gErVUBih+PWZW5ACM0Cs7ZYVTu5f\nH1Vmg8fk9Rpt3e2WCfG6FsbZT+8H9LMCepWH5n8zw2TGLv2oAoFkZncy0xFf5vi0\nOYhdsejUipeoIOgYLdSaHlcPWkLkJfBboXsEIhZ1qdE6yL3hHkT+sO7c8wZoN1y2\nMnGvIshE8vQJtouTK28jkp0SIxAdj8rerk/5KLFDd9naRynrITHoLAmH5cT6zeev\ns38BQcwFYHNpY6ZZ+FRf5u0uhgJGJraFkabl4U+nDJJJ/xlEeUKORMcZDUIUY2F1\nb0mjQeQRAgMBAAECgf9+jOeKQKuMHg51rWb7Ip1TFVpjklBvgL3JEeUjKWECX+U5\n1Z9CeHQXQbJXGyp12iMZajDNHg7QKpjUeEHdV9Y/3cz0uMLtzfJEU0VZbUSaqcIZ\n67l3pYtFEHtHzp1NvQTjs3CuZRyt/aqgdHQwaV5ib6Y6tDQdaBm7jSPUHpneH8Cl\n9H6EyemLq5QMT3u7WJPxRqttZd1rJCDLRjB0QA4zOaZIMkB9GIDIqs5+J/OMkLyp\nba2+XlJusqH/JuY72E+YUEw+F4e+9A5HbEwOXgnR4d4AYfcihSbegn0BPeT+O4j3\nLW6x0x+v2Jpv0sKNcosIeKYDR8d8rv7yaDN9GMECgYEA+q7xbgAOQYgUs6tobTkv\nuXopblCvcDHLpVYU9M5VpT6J6uKKujLt1cqvCNhfF+VG0Ik3HAe+7s8bq4r9YDo1\nV+v8oOgMjsde296JA+z24qgZkDhTnWt5keiycsfYMjxugjUPpSBrsab1dspzaYQ2\nbCPVmCxcGwmgeemR11Z01qECgYEAtzkfnSFy5fWO9CzxLNFd7g4PWPTsWxDSjeZt\nQlk3sJfw3ALxK4Of2R6FNeqLFVPPCm8Qwt7vdynhkoQg4UP147f/Hw8FgNyuAMup\nsY3JuWNgGifoFwFhJtlFu391YjljVihkTOVUKfxGCF8Fquz142FWIpna75FrmZo4\nKy/Yx3ECgYEAuIlYCNXZqLv4IVspAF58l1kqbp7OxxShCREZVC0gNwiWlmY2IWOk\nWSFfQG+ncPvC6XhZLTU2hK3JfLpQUyoGYrbBveGUfPafCdQDoPQruiZsyxHr25Jm\nZ9aYpo4exLxfzVIqNjBrlteFEvFtjFtbhLfMYL0nAHBRxez/AzoNwIECgYEAtSvL\n4dCoT1DPiQxDcgCYc4L9lAWjDK0Gtf9qfBfCJGEpbjOOi2t8jPFL4TNJUc5sRDHs\njfRpLxh/jyQNaxGLOx++KdTtqS0M9YZtBj9gf2sPJO3e5ZicmxBujmcLCBQc8J3C\nB/MflOB50186OHhU7wBZbp9ZyFev4NOIxNNr9FECgYEAtqNbTngLMKwOlIITkkus\nN+nIwuIyeEl7s9xKtcJ5FF+g+CPVeARoHFvzf8AAkZ+9t+J065pBEf6wl6R0pWtV\nP1qhquTIH3TfghnqlBqZTKrXWosimhJXgmJRnv4okJij8zabsDZghY5e02FzaF6A\no/jJ7sKQs3uCxmZv5T8oKGM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dbt-sa@data-cloud-kadri.iam.gserviceaccount.com",
+  "client_id": "105830578157363750799",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dbt-sa%40data-cloud-kadri.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
