@@ -71,10 +71,13 @@ Une table openfood_products dans BigQuery avec les colonnes :
 
 ### 🧪 Livrables
 
-✅ Fichier openfoodfacts_sample.csv
-✅ Capture d’écran de la table dans BigQuery
-✅ Script Python extract_openfood_api.py dans un dossier scripts/
-✅ (optionnel) Lien du bucket contenant le fichier CSV
+  ✅ Fichier openfoodfacts_sample.csv
+
+  ✅ Capture d’écran de la table dans BigQuery
+
+  ✅ Script Python extract_openfood_api.py dans un dossier scripts/
+
+  ✅ (optionnel) Lien du bucket contenant le fichier CSV
 ---
 
 ### Visualiser un fichier CSV depuis Cloud Storage dans BigQuery
