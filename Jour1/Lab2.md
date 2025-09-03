@@ -78,6 +78,7 @@ Une table openfood_products dans BigQuery avec les colonnes :
   ✅ Script Python extract_openfood_api.py dans un dossier scripts/
 
   ✅ (optionnel) Lien du bucket contenant le fichier CSV
+  
 ---
 
 ### Visualiser un fichier CSV depuis Cloud Storage dans BigQuery
