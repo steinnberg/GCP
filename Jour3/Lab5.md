@@ -27,11 +27,11 @@ my_dbt_project/
 ├── dbt_project.yml
 ├── profiles.yml
 └── ...
-
+```
 ---
 
 
-## 🔹 Étape 1 : Déclaration des sources dans `schema.yml`
+## Étape 1 : Déclaration des sources dans `schema.yml`
 
 ```
 yaml
@@ -45,10 +45,12 @@ sources:
       - name: clients
       - name: commandes
       - name: produits
+```
 
-🔹 Étape 2 : Création des modèles de staging
+## 🔹 Étape 2 : Création des modèles de staging
 
-## 📄 models/staging/stg_clients.sql
+### 📄 models/staging/stg_clients.sql
+```
 sql
 Copier le code
 {{ config(materialized='view') }}
@@ -59,8 +61,10 @@ select
     prenom,
     email
 from {{ source('raw_data', 'clients') }}
+```
 
-## 📄 models/staging/stg_commandes.sql
+### 📄 models/staging/stg_commandes.sql
+```
 sql
 Copier le code
 {{ config(materialized='view') }}
@@ -71,8 +75,10 @@ select
     date_commande,
     montant_total
 from {{ source('raw_data', 'commandes') }}
+```
 
 ## 📄 models/staging/stg_produits.sql
+```
 sql
 Copier le code
 {{ config(materialized='view') }}
@@ -83,8 +89,8 @@ select
     categorie,
     prix
 from {{ source('raw_data', 'produits') }}
-
-🔹 Étape 3 : Tests de qualité dans schema.yml
+```
+## 🔹 Étape 3 : Tests de qualité dans schema.yml
 Complète ton fichier models/staging/schema.yml :
 
 yaml
@@ -122,26 +128,26 @@ models:
 ```
 ---
 
-🔹 Étape 4 : Compilation, exécution et tests
+## 🔹 Étape 4 : Compilation, exécution et tests
 Dans le terminal (avec le bon venv activé) :
 
 
-## Compiler les modèles
+### Compiler les modèles
 ```
 dbt compile
 ```
 
-## Exécuter les modèles de staging
+### Exécuter les modèles de staging
 ```
 dbt run --select staging
 ```
 
-## Lancer les tests sur les IDs
+### Lancer les tests sur les IDs
 ```
 dbt test --select staging
 ```
 
-###✅ Résumé
+#### ✅ Résumé
 
  - Élément	Description
   sources	Connexion aux données brutes dans BigQuery
@@ -151,3 +157,4 @@ dbt test --select staging
   tests	Intégrés automatiquement par DBT
 
 ---
+
