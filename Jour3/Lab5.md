@@ -31,7 +31,7 @@ my_dbt_project/
 ---
 
 
-## Étape 1 : Déclaration des sources dans `schema.yml`
+## 🔹 Étape 1 : Déclaration des sources dans `schema.yml`
 
 ```
 yaml
@@ -157,4 +157,5 @@ dbt test --select staging
   tests	Intégrés automatiquement par DBT
 
 ---
+
 
