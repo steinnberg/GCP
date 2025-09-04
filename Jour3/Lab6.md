@@ -18,6 +18,7 @@ On ajoutera également :
 ## 🗂️ Structure attendue
 
 my_dbt_project/
+
 │
 ├── models/
 │ ├── staging/
@@ -25,8 +26,6 @@ my_dbt_project/
 │ ├── marts/
 │ │ └── int_commandes_clients.sql
 │ └── schema.yml (marts)
-
-
 
 ---
 
@@ -141,6 +140,7 @@ schema.yml	Tests : not_null, unique, description des colonnes
 commandes_summary.sql	KPIs optionnels sur les commandes
 dbt run	Exécution du modèle
 dbt test	Vérification de la qualité des données
+
 
 
 
