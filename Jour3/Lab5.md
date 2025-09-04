@@ -47,7 +47,8 @@ sources:
       - name: produits
 
 🔹 Étape 2 : Création des modèles de staging
-📄 models/staging/stg_clients.sql
+
+## 📄 models/staging/stg_clients.sql
 sql
 Copier le code
 {{ config(materialized='view') }}
@@ -58,7 +59,8 @@ select
     prenom,
     email
 from {{ source('raw_data', 'clients') }}
-📄 models/staging/stg_commandes.sql
+
+## 📄 models/staging/stg_commandes.sql
 sql
 Copier le code
 {{ config(materialized='view') }}
@@ -69,7 +71,8 @@ select
     date_commande,
     montant_total
 from {{ source('raw_data', 'commandes') }}
-📄 models/staging/stg_produits.sql
+
+## 📄 models/staging/stg_produits.sql
 sql
 Copier le code
 {{ config(materialized='view') }}
@@ -80,11 +83,13 @@ select
     categorie,
     prix
 from {{ source('raw_data', 'produits') }}
+
 🔹 Étape 3 : Tests de qualité dans schema.yml
 Complète ton fichier models/staging/schema.yml :
 
 yaml
 Copier le code
+```
 models:
   - name: stg_clients
     description: "Staging des clients"
@@ -114,24 +119,35 @@ models:
         tests:
           - not_null
           - unique
+```
+---
+
 🔹 Étape 4 : Compilation, exécution et tests
 Dans le terminal (avec le bon venv activé) :
 
-bash
-Copier le code
-# Compiler les modèles
+
+## Compiler les modèles
+```
 dbt compile
+```
 
-# Exécuter les modèles de staging
+## Exécuter les modèles de staging
+```
 dbt run --select staging
+```
 
-# Lancer les tests sur les IDs
+## Lancer les tests sur les IDs
+```
 dbt test --select staging
-✅ Résumé
-Élément	Description
-sources	Connexion aux données brutes dans BigQuery
-models	Vue de staging avec alias, typage et nettoyage
-schema.yml	Tests not_null et unique sur les ID
-materialized	view pour les modèles intermédiaires
-tests	Intégrés automatiquement par DBT
+```
 
+###✅ Résumé
+
+ - Élément	Description
+  sources	Connexion aux données brutes dans BigQuery
+  models	Vue de staging avec alias, typage et nettoyage
+  schema.yml	Tests not_null et unique sur les ID
+  materialized	view pour les modèles intermédiaires
+  tests	Intégrés automatiquement par DBT
+
+---
