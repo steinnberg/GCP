@@ -1,0 +1,8 @@
+gcloud projects add-iam-policy-binding data-cloud-kadri `
+  --member="679273107651-compute@developer.gserviceaccount.com" `
+  --role="roles/bigquery.jobUser"
+
+
+gcloud projects add-iam-policy-binding data-cloud-kadri `
+  --member="serviceAccount:679273107651-compute@developer.gserviceaccount.com" `
+  --role="roles/bigquery.dataEditor"

@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Customers nettoyé"
+    columns:
+      - name: customer_id
+        description: "Identifiant client (table orders)"
+        tests: [not_null, unique]
+      - name: customer_unique_id
+        description: "ID persistant (multi-comptes)"
+
+  - name: stg_orders
+    description: "Orders nettoyé"
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: customer_id
+        tests: [not_null]
+
+  - name: stg_order_items
+    description: "Lignes d'articles par commande"
+    columns:
+      - name: order_id
+        tests: [not_null]
+      - name: order_item_id
+        tests: [not_null]
+      - name: product_id
+      - name: seller_id
+      - name: price
+      - name: freight_value
+
+  - name: stg_payments
+    description: "Paiements par commande"
+    columns:
+      - name: order_id
+        tests: [not_null]
+      - name: payment_value

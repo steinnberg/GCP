@@ -1,0 +1,13 @@
+# Projet-level
+gcloud projects add-iam-policy-binding data-cloud-kadri --member="dbt-sa@data-cloud-kadri.iam.gserviceaccount.com
+" --role="roles/bigquery.user"
+gcloud projects add-iam-policy-binding data-cloud-kadri --member="dbt-sa@data-cloud-kadri.iam.gserviceaccount.com
+" --role="roles/bigquery.jobUser"
+gcloud projects add-iam-policy-binding data-cloud-kadri --member="dbt-sa@data-cloud-kadri.iam.gserviceaccount.com
+" --role="roles/bigquery.metadataViewer"
+gcloud projects add-iam-policy-binding data-cloud-kadri --member="dbt-sa@data-cloud-kadri.iam.gserviceaccount.com
+" --role="roles/bigquery.dataEditor"   # si pas fait
+
+# Vérification
+gcloud projects get-iam-policy data-cloud-kadri --flatten="bindings[].members" --format="table(bindings.role, bindings.members)" --filter="bindings.members:dbt-sa@data-cloud-kadri.iam.gserviceaccount.com
+"

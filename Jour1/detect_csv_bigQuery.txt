@@ -1,0 +1,8 @@
+bq --location=EU load --autodetect --source_format=CSV data-cloud-kadri.olist_customers  gs://kadri_bucket/olist_customers_dataset.csv
+bq --location=EU load --autodetect --source_format=CSV data-cloud-kadri.olist_orders     gs://kadri_bucket/olist_orders_dataset.csv
+bq --location=EU load --autodetect --source_format=CSV data-cloud-kadri.olist_order_items gs://kadri_bucket/olist_order_items_dataset.csv
+bq --location=EU load --autodetect --source_format=CSV data-cloud-kadri.olist_products    gs://kadri_bucket/olist_products_dataset.csv
+bq --location=EU load --autodetect --source_format=CSV data-cloud-kadri.olist_sellers     gs://kadri_bucket/olist_sellers_dataset.csv
+bq --location=EU load --autodetect --source_format=CSV data-cloud-kadri.olist_geolocation gs://kadri_bucket/olist_geolocation_dataset.csv
+bq --location=EU load --autodetect --source_format=CSV data-cloud-kadri.olist_payments    gs://kadri_bucket/olist_order_payments_dataset.csv
+bq --location=EU load --autodetect --source_format=CSV data-cloud-kadri.olist_reviews     gs://kadri_bucket/olist_order_reviews_dataset.csv

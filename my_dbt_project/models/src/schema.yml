@@ -1,0 +1,16 @@
+# models/src_olist/schema.yml
+version: 2
+sources:
+  - name: olist
+    database: data-cloud-kadri
+    schema: dbt_kadri
+    tables:
+      - name: olist_customers
+      - name: olist_orders
+      - name: olist_order_items
+      - name: olist_products
+      - name: olist_sellers
+      - name: olist_payments
+
+
+
