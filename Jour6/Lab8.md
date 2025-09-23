@@ -1,68 +1,54 @@
-# Lab 6 – Mini-projet d’orchestration ELT
+# 🧪 Lab 5 – Premier DAG Airflow sur GCP
 ## 🎯 Objectifs
-    - Construire un pipeline complet avec Airflow pour orchestrer un processus ELT sur GCP :
-    - Extraction d’un fichier CSV depuis une API.
-    -Ingestion dans Cloud Storage.
-    - Transformation avec Pandas.
-    - Chargement dans BigQuery.
+    - Déployer Airflow via Docker sur une VM GCP.
+
+    - Créer un DAG simple pour charger un fichier dans un bucket.
 
 ## 🔧 Prérequis
 
- - Airflow fonctionnel (cf. Lab 6).
-
- - Bucket GCP existant.
-
- - Dataset BigQuery créé.
----
+    - Une VM Linux (e2-medium, Ubuntu 22.04).
+    - Docker installé sur la VM.
+    - Un bucket de stockage GCP.
 
 ## 📝 Étapes
-### 1. Extraction d’un fichier depuis une API
+### 1. Installer Airflow via Docker
+#### Sur la VM
 
-    - Créer un opérateur Python qui télécharge un CSV (exemple : dataset public COVID depuis GitHub).
 ```bash
-import requests
-
-url = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/latest/owid-covid-latest.csv"
-r = requests.get(url)
-open("/tmp/covid.csv", "wb").write(r.content)
+sudo apt update && sudo apt install -y docker.io docker-compose
+git clone https://github.com/apache/airflow.git
+cd airflow
 ```
 ---
 
-2. Ingestion dans Cloud Storage
+- Configurer docker-compose.yaml (version fournie par Airflow Quickstart).
+- Lancer Airflow :
+
 ```bash
-gsutil cp /tmp/covid.csv gs://<YOUR_BUCKET>/raw/covid.csv
+docker-compose up -d
+```
+
+### 2. Créer un DAG simple
+
+Dans le dossier dags/, créer gcs_upload.py :
+```bash
+from airflow import DAG
+from airflow.operators.bash import BashOperator
+from datetime import datetime
+
+with DAG("upload_to_gcs",
+         start_date=datetime(2025, 1, 1),
+         schedule_interval="@daily",
+         catchup=False) as dag:
+
+    upload = BashOperator(
+        task_id="upload_file",
+        bash_command="gsutil cp /tmp/data.csv gs://<YOUR_BUCKET>/data.csv"
+    )
 ```
 ---
+### 3. Tester le DAG
 
-3. Transformation avec Pandas
-
-Nettoyer le CSV (garder location, date, new_cases).
-```bash
-import pandas as pd
-df = pd.read_csv("/tmp/covid.csv")
-df2 = df[["location","new_cases"]]
-df2.to_csv("/tmp/covid_clean.csv", index=False)
-```
----
-4. Chargement dans BigQuery
-```bash
-bq load --autodetect --source_format=CSV my_dataset.covid_clean gs://<YOUR_BUCKET>/raw/covid_clean.csv
-```
----
-
-5. DAG final
-
-Assembler les tâches dans un DAG Airflow (covid_pipeline.py) avec :
-
-    extract → ingest → transform → load
----
-
-6. Vérification
-
-Vérifier le dataset dans BigQuery avec une requête SQL simple :
-```bash
-SELECT location, SUM(new_cases) as total_cases
-FROM `my_dataset.covid_clean`
-GROUP BY location
-ORDER BY total_cases DESC
-```
+    - Placer un fichier data.csv dans /tmp/.
+    - Lancer le DAG depuis l’interface Airflow.
+    - Vérifier que le fichier est bien dans ton bucket.
