@@ -1,4 +1,4 @@
-# 🧪 Lab 4 – Sécurité et gestion des coûts (IAM + Billing) sur GCP
+# 🧪 Lab 6 – Sécurité et gestion des coûts (IAM + Billing) sur GCP
 
 ## 🎯 Objectifs
 - Comprendre la gestion des accès via **Identity & Access Management (IAM)**.  
