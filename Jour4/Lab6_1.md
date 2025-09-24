@@ -15,7 +15,7 @@ Le site doit être :
 - Sécurisé (paiements en ligne, RGPD).  
 - Peu coûteux au démarrage (budget < 100 €/mois).  
 
-Ils hésitent entre **AWS, Azure, GCP**.
+Ils hésitent entre **OVHCloud, **AWS, Azure, GCP**.
 
 ---
 
@@ -62,7 +62,7 @@ Remplir le tableau en groupe.
 
 ### 5. Recommandation finale
 - Chaque groupe écrit en 5 lignes une **recommandation** (quel fournisseur choisir + pourquoi).  
-- Restitution orale rapide (2 min/groupe).
+- Restitution orale rapide optionnel (2 min/groupe).
 
 ---
 
