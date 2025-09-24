@@ -1,4 +1,4 @@
-# 🧪 Lab 1 – Comparer AWS, Azure et GCP pour une startup e-commerce
+# 🧪 Lab 6_1 – Comparer OVHCloud, AWS, Azure et GCP pour une startup e-commerce
 
 ## 🎯 Objectifs
 - Découvrir les **différences stratégiques** entre les 3 grands fournisseurs Cloud.  
@@ -15,7 +15,7 @@ Le site doit être :
 - Sécurisé (paiements en ligne, RGPD).  
 - Peu coûteux au démarrage (budget < 100 €/mois).  
 
-Ils hésitent entre **OVHCloud, **AWS, Azure, GCP**.
+Ils hésitent entre **OVHCloud, AWS, Azure, GCP**.
 
 ---
 
@@ -49,7 +49,7 @@ Ils hésitent entre **OVHCloud, **AWS, Azure, GCP**.
 - Exporter les estimations (PDF ou capture d’écran).
 
 ### 4. Comparer dans un tableau
-| Critère                | AWS                      | Azure                    | GCP                    |
+| Critère                | AWS                      | Azure                    | GCP                    | OVHCloud
 |------------------------|--------------------------|--------------------------|------------------------|
 | Facilité d’utilisation |                          |                          |                        |
 | Coût estimé (€/mois)   |                          |                          |                        |
@@ -78,3 +78,4 @@ Remplir le tableau en groupe.
 - [AWS Pricing Calculator](https://calculator.aws/#/)  
 - [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)  
 - [GCP Pricing Calculator](https://cloud.google.com/products/calculator)  
+- [GCP Pricing Calculator](https://www.ovhcloud.com/en-ca/public-cloud/prices/) 
