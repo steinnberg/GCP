@@ -49,7 +49,7 @@ Ils hésitent entre **OVHCloud, AWS, Azure, GCP**.
 - Exporter les estimations (PDF ou capture d’écran).
 
 ### 4. Comparer dans un tableau
-| Critère                | AWS                      | Azure                    | GCP                    | OVHCloud                   |
+| Critère                | AWS                      | Azure                    | GCP                    |
 |------------------------|--------------------------|--------------------------|------------------------|
 | Facilité d’utilisation |                          |                          |                        |
 | Coût estimé (€/mois)   |                          |                          |                        |
