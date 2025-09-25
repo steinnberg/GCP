@@ -1,4 +1,4 @@
-# 🧪 Lab 5 — Déployer une VM GCP, installer Docker et lancer Nginx
+# 🧪 Lab 7 — Déployer une VM GCP, installer Docker et lancer Nginx
 
 ## 🎯 Objectifs
 - Créer et configurer une **VM Linux** sur **Google Cloud Platform** (GCP).
