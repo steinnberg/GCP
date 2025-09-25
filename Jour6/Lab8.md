@@ -1,4 +1,4 @@
-# 🧪 Lab 5 – Premier DAG Airflow sur GCP
+# 🧪 Lab 8 – Premier DAG Airflow sur GCP
 ## 🎯 Objectifs
     - Déployer Airflow via Docker sur une VM GCP.
 

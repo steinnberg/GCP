@@ -44,8 +44,7 @@ Name : vm-nginx (ou ton VM_NAME)
     - Machine type : e2-micro (suffisant pour ce lab)
     - Boot disk : Ubuntu 22.04 LTS
     - Firewall : cocher Allow HTTP traffic
-    - C
-    reate
+    - Create
 ```    
 Cocher “Allow HTTP traffic” crée (ou utilise) une règle réseau permettant le trafic TCP:80 vers les VMs taguées.
 ```

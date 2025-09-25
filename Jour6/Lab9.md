@@ -1,4 +1,4 @@
-# Lab 6 – Mini-projet d’orchestration ELT
+# Lab 9 – Mini-projet d’orchestration ELT
 ## 🎯 Objectifs
     - Construire un pipeline complet avec Airflow pour orchestrer un processus ELT sur GCP :
     - Extraction d’un fichier CSV depuis une API.
