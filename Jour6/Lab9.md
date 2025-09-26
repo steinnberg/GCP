@@ -28,13 +28,13 @@ open("/tmp/covid.csv", "wb").write(r.content)
 ```
 ---
 
-2. Ingestion dans Cloud Storage
+### 2. Ingestion dans Cloud Storage
 ```bash
 gsutil cp /tmp/covid.csv gs://<YOUR_BUCKET>/raw/covid.csv
 ```
 ---
 
-3. Transformation avec Pandas
+### 3. Transformation avec Pandas
 
 Nettoyer le CSV (garder location, date, new_cases).
 ```bash
@@ -44,20 +44,20 @@ df2 = df[["location","new_cases"]]
 df2.to_csv("/tmp/covid_clean.csv", index=False)
 ```
 ---
-4. Chargement dans BigQuery
+### 4. Chargement dans BigQuery
 ```bash
 bq load --autodetect --source_format=CSV my_dataset.covid_clean gs://<YOUR_BUCKET>/raw/covid_clean.csv
 ```
 ---
 
-5. DAG final
+### 5. DAG final
 
 Assembler les tâches dans un DAG Airflow (covid_pipeline.py) avec :
 
     extract → ingest → transform → load
 ---
 
-6. Vérification
+### 6. Vérification
 
 Vérifier le dataset dans BigQuery avec une requête SQL simple :
 ```bash
